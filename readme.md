@@ -1,6 +1,8 @@
 ### Note
 
-#### La cartella app contiene script python
+#### 2022-02-08 22:12 La cartella app contiene script python
+
+-- -
 
 #### Usato free tool SendSMTP
 download: https://www.softpedia.com/get/Internet/E-mail/Mail-Utilities/SendSMTP.shtml#download
