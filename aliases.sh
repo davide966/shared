@@ -143,4 +143,4 @@ xfc() {
 
 # usato solo per servers:
 # pastebin usa CRLF, converto con tr -d $'[\x0D]'
-alias aliasupdate="curl https://sharetext.me/raw/uzan853qaj | tr -d $'[\r]' > ~/.bash_aliases && source ~/.bash_aliases"
+alias aliasupdate="curl https://raw.githubusercontent.com/davide966/shared/main/aliases.sh | tr -d $'[\r]' > ~/.bash_aliases && source ~/.bash_aliases"
