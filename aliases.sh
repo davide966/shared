@@ -101,7 +101,7 @@ alias pcat='pygmentize -g'
 alias hcat='highlight -O ansi --force'
 # tail log
 alias tl='tail -f /var/log/syslog'
-alias lf='less +F'
+alias lef='less +F'
 # ·····nordvpn·············
 alias nd='nordvpn d'
 alias nca='nordvpn c austria'
