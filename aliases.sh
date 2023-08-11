@@ -1,3 +1,4 @@
+# daxxx 2023-08-11 18:12
 # per conoscere comando associato all'alias:
 # alias comando
 # type -a comando
@@ -60,13 +61,14 @@ alias dcstop='docker-compose stop'
 alias dcu='docker-compose up -d'
 alias dcd='docker-compose down'
 alias dcl='docker-compose logs -f'
-alias dcr='docker-compose run'
+alias dcr='docker-compose run --rm'
 alias dce='docker-compose exec'
 alias dcb='docker-compose build'
 alias dip='docker image prune -f'
 alias owndir='sudo chown -R "$USER":"$USER" .'
 # ·········ssh·············
 alias sshi='ssh -i .ssh/id_ed25519'
+alias sl="sed -rn 's/^\s*Host\s+(.*)\s*/\1/ip' ~/.ssh/config"
 # ·········adb·············
 alias ai='adb install'
 alias apus='adb push'
@@ -86,7 +88,7 @@ alias lk='dpkg -l | grep " linux-"'
 alias lvr="dpkg -l linux-{image,headers,modules}-\* | awk '/^ii/{print $2}' | egrep '[0-9]+\.[0-9]+\.[0-9]+' | grep -v $(uname -r | cut -d- -f-2)"
 # list vecchi kernel
 f_lvk() {
-  dpkg -l linux-{image,headers,modules}-\* | awk '/^ii/{print $2}' | egrep '[0-9]+\.[0-9]+\.[0-9]+' | grep -v $(uname -r | cut -d- -f-2)      
+  dpkg -l linux-{image,headers,modules}-\* | awk '/^ii/{print $2}' | egrep '[0-9]+\.[0-9]+\.[0-9]+' | grep -v $(uname -r | cut -d- -f-2)
 }
 # rimuove vecchi kernel
 f_rvk() {
@@ -106,15 +108,25 @@ alias lef='less +F'
 alias nd='nordvpn d'
 alias nca='nordvpn c austria'
 alias ncg='nordvpn c germany'
- 
+
 # ubuntu .bashrc specific
-alias ls='ls --color=auto'
+alias ls='ls --color=auto --group-directories-first'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias ll='ls -alF --group-directories-first'
+alias la='ls -A --group-directories-first'
+alias l='ls -CF --group-directories-first'
+
+# daxxx 2022-12-13 11:22
+# ·····arch linux·············
+alias par='paru -Syu --noconfirm --skipreview'
+
+# daxxx 2022-11-15 17:58
+# ····· fasd ·············
+alias v='f -e vim' # quick opening files with vim
+alias z='fasd_cd -d'
+alias lf='lfcd'
 
 # daxxx specific
 alias t='/home/davide/Dropbox/todo/todo.sh'
